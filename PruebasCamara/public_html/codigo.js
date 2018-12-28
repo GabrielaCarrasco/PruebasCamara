@@ -50,7 +50,7 @@ $("#btnGuardar2").click(funcionGuardar2);
 function funcionGuardar2(){
   if( document.getElementById("contenidoCam2")){
     archivo=document.getElementById("contenidoCam2").files[0];
-   OCR(archivo);
+    prueba();
     }
 }
 
@@ -67,7 +67,7 @@ $("#btnGuardar4").click(funcionGuardar4);
 function funcionGuardar4(){
       if( document.getElementById("contenidoCam4")){
     archivo=document.getElementById("contenidoCam4").files[0];
-   OCR(archivo);
+   prueba();
     }
 }
 
@@ -83,6 +83,11 @@ Tesseract.recognize(archivo)
   };
   
 function obtenerNumeroCI(texto){
-    alert(texto);
+    $("#resPage1").empty(); 
+    $("#resPage1").append(texto);
+}
+
+function prueba(){
+    alert ("Anda alert");
 }
 
