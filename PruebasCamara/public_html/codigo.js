@@ -1,5 +1,6 @@
 $("#btnPrueba1").click(funcionBoton1);
 $("#btnPrueba2").click(funcionBoton2);
+$("#btnPrueba5").click(funcionBoton5);
 
 var _visible1=false;
 var _visible2=false;
@@ -90,4 +91,50 @@ function obtenerNumeroCI(texto){
 function prueba(){
     alert ("Anda alert");
 }
+    var video = document.querySelector('#video'), canvas = document.querySelector('#cam'),
+    img=document.querySelector("#fotoDocumento");
+function funcionBoton5(){
+       $(":mobile-pagecontainer").pagecontainer("change", "#pbtn5");
+      window.addEventListener('load',iniciarCamara());
+}
+    $("#btnSacarFoto").click(sacarFoto);
+function iniciarCamara(){
+
+    var p = navigator.mediaDevices.getUserMedia({ audio: false, video: true });
+
+p.then(function(mediaStream) {
+  var video = document.querySelector('video');
+  //video.src = window.URL.createObjectURL(mediaStream);
+  video.src=mediaStream;
+  video.onloadedmetadata = function(e) {
+alert ("aca");
+  };
+});
+
+p.catch(function(err) { console.log(err.name); }); // always check for errors at the end.
+    /*
+    navigator.getUserMedia = (navigator.getUserMedia || navigator.mediaDevices.getUserMedia() || navigator.webkitGetUserMedia);
+    if(navigator.getUserMedia){
+        navigator.getUserMedia({video:true}, function(stream){
+            //video.src= window.URL.createObjectURL(stream);
+            video.src=stream;
+            video.play();  
+        },function(e){alert(e);})
+    }else alert ("No anda ");   */
+    
+    video.addEventListener('loadedmetadata', function (){canvas.width= videoWidth; canvas.height=videoHeight;},false);
+    
+
+    
+
+    
+    
+}
+
+    function sacarFoto(){
+        alert("ACA");
+        canvas.getContext('2d').drawImage(video,0,0);
+        var imgData= canvas.toDataURL('image/png');
+        img.setAttribute("src",imgData);
+    }
 
