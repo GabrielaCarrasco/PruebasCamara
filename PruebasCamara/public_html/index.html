@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Camara</title>
+        <title>Prueba Camara</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="jquery.mobile-1.4.5.css" rel="stylesheet" type="text/css"/>
@@ -10,57 +10,20 @@
     <body>
         <div data-role="page">
             <div data-role="header">ENCABEZADO </div>
-            <div class="ui-content">
-                <p>Pruebas con atributo capture</p>
-                <input type="button" value="Prueba camara sección oculta" id="btnPrueba1">
-                <div id="altaFoto1" hidden>
-                    <input type="file" accept="image/*" capture id="contenidoCam1">
-                    <Input type="button" value="guardar" id="btnGuardar1">
-                </div>
-                <input type="button" value="Prueba camara otra pagina" id="btnPrueba2">
-                <p>Pruebas capture=capture</p>
-                <input type="button" value="Prueba camara sección oculta" id="btnPrueba3">
-                <div id="altaFoto2" hidden>
-                    <input type="file" accept="image/*" capture="camera" id="contenidoCam3">
-                    <Input type="button" value="guardar" id="btnGuardar3">
-                </div>
-                <input type="button" value="Prueba camara otra pagina" id="btnPrueba4">
-                <p> MáS PRUEBAS </p>
+            <div class="ui-content"> 
                 <input type="button" value="Prueba usando js" id="btnPrueba5">
-                <p id="resPage1"></p>
             </div>
             <div data-role="footer">PIE 1</div>
-        </div>
-        <div data-role="page" id="pbtn2">      
-            <div data-role="header"> 
-                PRUEBA BTN 2
-            </div>
-            <div class="ui-content">
-                <input type="file" accept="image/*" capture id="contenidoCam2">
-                <Input type="button" value="guardar" id="btnGuardar2">
-                <p id="resPage2"></p>
-            </div>
-
-            <div data-role="footer">PIE 2</div>     
-        </div>
-
-        <div data-role="page" id="pbtn4">      
-            <div data-role="header"></div>
-            <div class="ui-content">
-                <input type="file" accept="image/*" capture="camera" id="contenidoCam4"> 
-                <Input type="button" value="guardar" id="btnGuardar4">
-                <p id="resPage4"></p>
-            </div> 
-            <div data-role="footer">PIE 4</div>
-
-        </div>
+        </div>     
            <div data-role="page" id="pbtn5">      
             <div data-role="header"> ENCABEZADO</div>
             <div class="ui-content">
                 <p>PRUEBA</p>
                 <img src="" id="fotoDocumento">
-                <video id="video"></video>
-                <canvas id="cam"> </canvas>
+                     <div class="booth">
+            <video id="video" width="400" height="300" autoplay></video>
+            <canvas  id="canvas" width="400" height="300" ></canvas>
+        </div>
                 <input type="button" id="btnSacarFoto" value="Sacar foto">
             </div> 
             <div data-role="footer">PIE </div>
