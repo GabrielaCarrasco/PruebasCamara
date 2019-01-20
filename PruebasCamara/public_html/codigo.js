@@ -12,12 +12,7 @@ function iniciarCamara(){
       var canvas = document.getElementById('canvas'),
     context = canvas.getContext('2d'),
     
-    video= document.getElementById('video'),
-   url = window.URL || 
-            window.webkitURL || 
-            window.mozURL || 
-            window.msURL;
-    
+    video= document.getElementById('video');
     navigator.getMedia = navigator.getUserMedia || navigator.mediaDevices.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia; 
     
     navigator.getMedia({
