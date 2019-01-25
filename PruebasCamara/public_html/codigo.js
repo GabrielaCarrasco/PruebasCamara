@@ -27,8 +27,8 @@ function iniciarCamara() {
         video.srcObject = stream;
         video.play();
     }, function (error) {
-        alert(error.code);
-        alert(error.message);
+        alert("Codigo" + error.code);
+        alert("Mensaje"+ error.message);
     });
 }
 
