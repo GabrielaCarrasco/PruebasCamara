@@ -6,34 +6,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="jquery.mobile-1.4.5.css" rel="stylesheet" type="text/css"/>
         <link href="jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" type="text/css"/>
+        <link href="estilos.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <div data-role="page">
             <div data-role="header">ENCABEZADO </div>
             <div class="ui-content"> 
-                <input type="button" value="Prueba usando js" id="btnPrueba5">
+                <input type="button" value="Prueba canvas" id="btnPrueba5">
             </div>
             <div data-role="footer">PIE 1</div>
         </div>     
-           <div data-role="page" id="pbtn5">      
+        <div data-role="page" id="pbtn5">      
             <div data-role="header"> ENCABEZADO</div>
             <div class="ui-content">
-                <p>PRUEBA</p>
-                <img src="" id="fotoDocumento">
-                     <div class="booth">
-            <video id="video" width="400" height="300" autoplay></video>
-            <canvas  id="canvas" width="400" height="300" ></canvas>
-        </div>
+                <img src="" id="fotoDocumento"  width="400" height="300" alt="">
+                <div class="camara">
+                    <video id="video" width="400" height="300" autoplay></video>
+                    <canvas  id="canvas" width="400" height="300" ></canvas>
+                </div>
                 <input type="button" id="btnSacarFoto" value="Sacar foto">
             </div> 
-            <div data-role="footer">PIE </div>
-
-        </div>
-
-
-
+            <div data-role="footer">PIE 2</div>
+        </div>        
         <script src="phonegap.js"></script>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/1.0.10/tesseract.min.js'></script>
         <script src="jquery-2.1.1.min.js" type="text/javascript"></script>
         <script src="jquery.mobile-1.4.5.min.js" type="text/javascript"></script>      
         <script src="codigo.js" type="text/javascript"></script>
